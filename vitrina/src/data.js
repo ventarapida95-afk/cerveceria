@@ -12,7 +12,7 @@ export const DATA = {
   reviewCount: 28,
   priceRange: '$15.000–20.000 por persona',
   mapsUrl: 'https://www.google.com/maps/place/Brunnemann-Cerveceria-Restaurante/@-37.8328949,-72.6569249,18z/data=!4m6!3m5!1s0x966bb3533424a5af:0xb74f04c16cd0ac3b!8m2!3d-37.8322167!4d-72.6574428!16s%2Fg%2F11k574hk45',
-  reviewUrl: 'https://search.google.com/local/writereview?placeid=g/11k574hk45',
+  reviewUrl: 'https://search.google.com/local/writereview?placeid=0xb74f04c16cd0ac3b',
   mapEmbed: 'https://www.google.com/maps?q=-37.8322167,-72.6574428&z=16&output=embed',
   hours: 'Mar–Dom · desde las 18:30 hrs',
 }
