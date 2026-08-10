@@ -11,16 +11,16 @@ export const slugify = (name) =>
 export const localProductImage = (name) => `/images/${slugify(name)}.jpg`
 
 const STOCK = {
-  'rubia-brunnemann': 'https://images.unsplash.com/photo-1518176258769-f227c798150e?w=1000&q=80',
-  'ambar-brunnemann': 'https://images.unsplash.com/photo-1584271854089-9bb3e5168e32?w=1000&q=80',
-  'ipa-del-bosque': 'https://images.unsplash.com/photo-1608270586620-248524c67de9?w=1000&q=80',
-  'stout-chocolate': 'https://images.unsplash.com/photo-1530267981375-f0de937f5f13?w=1000&q=80',
-  'pack-degustacion-6': 'https://images.unsplash.com/photo-1436076863939-06870fe779c2?w=1000&q=80',
-  'tabla-brunnemann': 'https://images.unsplash.com/photo-1541014741259-de529411b96a?w=1000&q=80',
+  'rubia-brunnemann': 'https://images.unsplash.com/photo-1782450681554-1dedff0b9d9d?w=1000&q=80',
+  'ambar-brunnemann': 'https://images.unsplash.com/photo-1778164483558-38853e79cbd0?w=1000&q=80',
+  'ipa-del-bosque': 'https://images.unsplash.com/photo-1644085159560-8b6745fc8b60?w=1000&q=80',
+  'stout-chocolate': 'https://images.unsplash.com/photo-1716339140117-ade27f94c11b?w=1000&q=80',
+  'pack-degustacion-6': 'https://images.unsplash.com/photo-1522057306606-8d84daa75e87?w=1000&q=80',
+  'tabla-brunnemann': 'https://images.unsplash.com/photo-1616631124348-c63521eb484c?w=1000&q=80',
   'hamburguesa-ahumada': 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1000&q=80',
   'papas-fritas-brunnemann': 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=1000&q=80',
   'pizza-de-horno': 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1000&q=80',
-  'cata-guiada': 'https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?w=1000&q=80',
+  'cata-guiada': 'https://images.unsplash.com/photo-1641631366865-8f7aa9fbc584?w=1000&q=80',
 }
 
 const CATEGORY_FALLBACK = {
