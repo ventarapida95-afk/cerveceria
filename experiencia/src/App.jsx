@@ -6,6 +6,7 @@ import Footer from './components/Footer.jsx'
 import CartDrawer from './components/CartDrawer.jsx'
 import CheckoutModal from './components/CheckoutModal.jsx'
 import Toast from './components/Toast.jsx'
+import ScrollTop from './components/ScrollTop.jsx'
 import Home from './pages/Home.jsx'
 import Services from './pages/Services.jsx'
 import Confirmacion from './pages/Confirmacion.jsx'
@@ -29,6 +30,7 @@ function Shell() {
       <CartDrawer onCheckout={() => { setCheckoutOpen(true); setDrawerOpen(false) }} />
       <CheckoutModal open={checkoutOpen} onClose={() => setCheckoutOpen(false)} />
       <Toast />
+      <ScrollTop />
 
       {count > 0 && (
         <button className="fab" aria-label="Ver carrito" onClick={() => setDrawerOpen(true)}>
