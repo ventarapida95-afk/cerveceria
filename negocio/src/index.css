@@ -539,6 +539,9 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; }
 
   .review { padding: 22px; }
   .review p { font-size: 0.9rem; }
+  .g-review-cta { margin-top: 28px; }
+  .g-review-cta .btn { width: 100%; max-width: 360px; }
+  .g-review-cta .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
 
   .banner { padding: 46px 20px; }
   .banner h2 { font-size: 1.55rem; }
