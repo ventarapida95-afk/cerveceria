@@ -19,8 +19,8 @@ export default function MapSection() {
           />
           <div className="map-card">
             <h3>{BUSINESS.shortName}</h3>
-            <div className="row"><MapPinIcon />{BUSINESS.city}</div>
-            <div className="row"><ClockIcon /> Mar–Dom · 12:00 a 00:00</div>
+            <div className="row"><MapPinIcon />{BUSINESS.address}</div>
+            <div className="row"><ClockIcon /> {BUSINESS.hours}</div>
             <div className="row"><PhoneIcon /> {BUSINESS.phone}</div>
             <a className="btn btn-gold" href={BUSINESS.mapsUrl} target="_blank" rel="noreferrer">Abrir en Google Maps</a>
           </div>

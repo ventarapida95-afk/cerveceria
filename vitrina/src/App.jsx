@@ -37,7 +37,7 @@ export default function App() {
     <>
       <header className={`nav ${scrolled ? 'scrolled' : ''}`}>
         <div className="container nav-inner">
-          <a href="#top" className="nav-logo"><img src="/logo.svg" alt="" />{DATA.shortName}</a>
+          <a href="#top" className="nav-logo"><img src="/brunnemann.jpg" alt="" />{DATA.shortName}</a>
           <nav className="nav-links">
             <a href="#menu">Carta</a>
             <a href="#nosotros">Nosotros</a>
@@ -64,9 +64,9 @@ export default function App() {
         <div className="container">
           <div className="features">
             <div className="feature"><div className="num">12+</div><h3>Cervezas de la casa</h3><p>Recetas propias con lúpulos nobles y agua del sur.</p></div>
-            <div className="feature"><div className="num">4.8★</div><h3>En Google Maps</h3><p>Nuestros clientes nos califican cada semana.</p></div>
+            <div className="feature"><div className="num">4.8★</div><h3>En Google Maps</h3><p>{DATA.reviewCount} reseñas de clientes reales.</p></div>
             <div className="feature"><div className="num">Fuego</div><h3>Cocina de leña</h3><p>Horno a leña, ahumados y tablas para compartir.</p></div>
-            <div className="feature"><div className="num">Mar–Dom</div><h3>Abierto casi todos los días</h3><p>De 12:00 a 00:00 hrs, con despacho a domicilio.</p></div>
+            <div className="feature"><div className="num">Mar–Dom</div><h3>Desde las 18:30 hrs</h3><p>{DATA.priceRange}. Promos todos los miércoles.</p></div>
           </div>
         </div>
       </section>
@@ -107,7 +107,7 @@ export default function App() {
             <span className="eyebrow">Nosotros</span>
             <h2 className="section-title">Un oficio familiar<br />hecho cerveza</h2>
             <p className="section-sub" style={{ marginBottom: 18 }}>Brunnemann nace del respeto por los procesos lentos: maltas seleccionadas, fermentación paciente y recetas que no cambian con las modas.</p>
-            <div className="info-row"><Pin />{DATA.city}</div>
+            <div className="info-row"><Pin />{DATA.address} · {DATA.city}</div>
             <div className="info-row"><Clock />{DATA.hours}</div>
             <div className="info-row"><Phone />{DATA.phone}</div>
           </div>

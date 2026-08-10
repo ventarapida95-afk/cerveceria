@@ -13,7 +13,7 @@ export default function ContactSection() {
           <div className="contact-card">
             <div className="icon"><MapPinIcon /></div>
             <h3>Dirección</h3>
-            <p>{BUSINESS.city}</p>
+            <p>{BUSINESS.address}</p>
           </div>
           <div className="contact-card">
             <div className="icon"><PhoneIcon /></div>
@@ -23,7 +23,7 @@ export default function ContactSection() {
           <div className="contact-card">
             <div className="icon"><ClockIcon /></div>
             <h3>Horarios</h3>
-            <p>Mar a Dom · 12:00 – 00:00</p>
+            <p>{BUSINESS.hours}</p>
           </div>
           <div className="contact-card">
             <div className="icon"><WhatsAppIcon /></div>

@@ -22,9 +22,9 @@ export default function Hero() {
           <a href={BUSINESS.mapsUrl} target="_blank" rel="noreferrer" className="btn btn-outline">Cómo llegar</a>
         </div>
         <div className="hero-stats">
-          <div className="stat"><div className="num">12+</div><div className="lbl">Cervezas de la casa</div></div>
-          <div className="stat"><div className="num">4.8★</div><div className="lbl">En Google Maps</div></div>
-          <div className="stat"><div className="num">45'</div><div className="lbl">Entrega en Angol</div></div>
+          <div className="stat"><div className="num">4.8★</div><div className="lbl">{BUSINESS.reviewCount} reseñas en Google</div></div>
+          <div className="stat"><div className="num">Mar–Dom</div><div className="lbl">Desde las 18:30 hrs</div></div>
+          <div className="stat"><div className="num">$15.000</div><div className="lbl">Precio promedio por persona</div></div>
         </div>
       </div>
     </section>

@@ -2,10 +2,10 @@ import { BUSINESS } from '../lib/constants.js'
 import { GoogleIcon, StarIcon } from './icons.jsx'
 
 const REVIEWS = [
-  { name: 'Carolina M.', date: 'Hace 2 semanas', stars: 5, text: 'La mejor cerveza artesanal de Angol. El ambiente es espectacular y la atención de primer nivel. Totalmente recomendada.' },
-  { name: 'Jorge A.', date: 'Hace 1 mes', stars: 5, text: 'Pedí online y llegó en perfecto estado y rápido. La IPA del Bosque es un viaje. ¡Y las papas que envían son brutales!' },
-  { name: 'Valentina R.', date: 'Hace 1 mes', stars: 5, text: 'Fuimos por la cata guiada y nos encantó. Aprendimos un montón y la comida de fuego es imperdible. Volveremos seguro.' },
-  { name: 'Matías S.', date: 'Hace 2 meses', stars: 4, text: 'Muy buen lugar, cervezas con carácter y precios justos. El único detalle es que los fines de semana se llena, pero vale la pena esperar.' },
+  { name: 'Agustín Esper', date: 'Hace 1 año', stars: 5, text: 'Muy bonito el local, y buen servicio. Muy buena la cerveza del local, además tienen promociones los días miércoles. Las papas y las hamburguesas estaban ricas.' },
+  { name: 'Iván A. Regla Giacomozzi', date: 'Hace 8 meses', stars: 5, text: 'Excelente servicio, súper buena relación calidad precio. Probamos la cerveza ámbar y rubia, súper ricas las dos. Recomendado 5/5. Buena atención y ambiente.' },
+  { name: 'Denisse Novoa Vega', date: 'Hace 3 meses', stars: 5, text: 'Un lugar que elegimos siempre que queremos compartir en familia. Celebramos nuestro matrimonio civil y nos fuimos para allá a festejar.' },
+  { name: 'Matías S.', date: 'Hace 2 meses', stars: 4, text: 'Muy buen lugar, cervezas con carácter y precios justos. Los miércoles hay promociones que valen la pena. Recomendado.' },
 ]
 
 export default function Reviews() {

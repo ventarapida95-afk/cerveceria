@@ -44,7 +44,7 @@ export default function Navbar() {
     <header className={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-inner">
         <Link to="/" className="nav-logo">
-          <img src="/logo.svg" alt="Brunnemann" />
+          <img src="/brunnemann.jpg" alt="Brunnemann" />
           <span>BRUNNEMANN</span>
         </Link>
 

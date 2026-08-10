@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="brand">
             <Link to="/" className="nav-logo">
-              <img src="/logo.svg" alt="Brunnemann" />
+              <img src="/brunnemann.jpg" alt="Brunnemann" />
               <span>BRUNNEMANN</span>
             </Link>
             <p>Cerveza artesanal elaborada en Angol con agua de la cordillera, granos seleccionados y mucha paciencia. Gastronomía para acompañar cada vaso.</p>

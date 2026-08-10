@@ -1,16 +1,20 @@
 export const DATA = {
   name: 'Brunnemann Cervecería Restaurante',
   shortName: 'Brunnemann',
+  address: 'Camino Angol–Collipulli km 2,5 · Parcela 7',
   city: 'Angol, Región de La Araucanía',
-  phone: '+56 9 0000 0000', // TODO: teléfono real
-  whatsapp: '56900000000', // TODO
+  phone: '+56 9 6871 0565',
+  whatsapp: '56968710565',
   email: 'contacto@brunnemann.cl', // TODO
   instagram: 'https://instagram.com', // TODO
   facebook: 'https://facebook.com', // TODO
+  rating: '4.8',
+  reviewCount: 28,
+  priceRange: '$15.000–20.000 por persona',
   mapsUrl: 'https://www.google.com/maps/place/Brunnemann-Cerveceria-Restaurante/@-37.8328949,-72.6569249,18z/data=!4m6!3m5!1s0x966bb3533424a5af:0xb74f04c16cd0ac3b!8m2!3d-37.8322167!4d-72.6574428!16s%2Fg%2F11k574hk45',
   reviewUrl: 'https://search.google.com/local/writereview?placeid=g/11k574hk45',
   mapEmbed: 'https://www.google.com/maps?q=-37.8322167,-72.6574428&z=16&output=embed',
-  hours: 'Mar–Dom · 12:00 a 00:00',
+  hours: 'Mar–Dom · desde las 18:30 hrs',
 }
 
 export const IMG = {
@@ -24,19 +28,20 @@ export const IMG = {
 
 export const MENU = [
   { cat: 'Cervezas de la casa', items: [
-    { name: 'Golden Lager', note: 'Lager dorada · 5.2%', price: '$4.500' },
+    { name: 'Rubia Brunnemann', note: 'Rubia refrescante · 5.0%', price: '$4.500' },
+    { name: 'Ámbar Brunnemann', note: 'Ámbar caramelizada · 5.5%', price: '$4.800' },
     { name: 'IPA del Bosque', note: 'IPA lupulada · 6.8%', price: '$5.500' },
     { name: 'Stout Chocolate', note: 'Stout con chocolate · 7.0%', price: '$6.000' },
-    { name: 'Trigo Selva', note: 'Weissbier · 5.0%', price: '$5.000' },
   ]},
   { cat: 'Para comer', items: [
+    { name: 'Hamburguesa Ahumada', note: 'Angus ahumada + papas fritas', price: '$10.900' },
+    { name: 'Papas fritas Brunnemann', note: 'Rustic con salsa de la casa', price: '$6.900' },
     { name: 'Tabla Brunnemann', note: 'Quesos, embutidos y pan', price: '$15.900' },
-    { name: 'Hamburguesa Ahumada', note: 'Angus ahumada + papas', price: '$10.900' },
     { name: 'Pizza de Horno', note: 'Horno a leña', price: '$12.900' },
   ]},
-  { cat: 'Experiencias', items: [
+  { cat: 'Promos', items: [
+    { name: 'Miércoles de Promos', note: 'Promociones todos los miércoles', price: '—' },
     { name: 'Cata Guiada', note: '5 estilos con el maestro cervecero', price: '$15.000' },
-    { name: 'Tour de Cervecería', note: 'Sala de cocción + maridaje', price: '$20.000' },
   ]},
 ]
 
