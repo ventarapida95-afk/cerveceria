@@ -1,6 +1,19 @@
+import { useState } from 'react'
 import { useCart } from '../context/CartContext.jsx'
 import { CURRENCY } from '../lib/constants.js'
 import { CartIcon } from './icons.jsx'
+import { localProductImage, stockProductImage } from '../lib/productImages.js'
+
+function CartImage({ item }) {
+  const [src, setSrc] = useState(item.image_url || localProductImage(item.name))
+  return (
+    <img
+      src={src}
+      alt={item.name}
+      onError={() => setSrc(stockProductImage(item.name, item.category))}
+    />
+  )
+}
 
 export default function CartDrawer({ onCheckout }) {
   const { items, drawerOpen, setDrawerOpen, changeQty, removeItem, total, count } = useCart()
@@ -24,7 +37,7 @@ export default function CartDrawer({ onCheckout }) {
           )}
           {items.map((i) => (
             <div className="drawer-item" key={i.id}>
-              <img src={i.image_url} alt={i.name} />
+              <CartImage item={i} />
               <div className="info">
                 <h4>{i.name}</h4>
                 <div className="price">{CURRENCY.format(i.price)}</div>

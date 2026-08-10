@@ -1,4 +1,6 @@
-import { IMAGES } from '../lib/images.js'
+import { useState } from 'react'
+import { IMAGES, IMAGE_LOCAL } from '../lib/images.js'
+import { useLocalImage } from '../lib/useLocalImage.js'
 
 const PERKS = [
   { name: 'Descuento 15%', desc: 'En toda tu cuenta, todos los días.' },
@@ -8,6 +10,8 @@ const PERKS = [
 ]
 
 export default function Membresia() {
+  const toast = useLocalImage(IMAGE_LOCAL.toast, IMAGES.toast)
+  const [src, setSrc] = useState(toast)
   return (
     <section className="section" id="membresia">
       <div className="container">
@@ -18,7 +22,8 @@ export default function Membresia() {
         </div>
         <div className="split media-right">
           <div className="media">
-            <img src={IMAGES.toast} alt="Membresía" loading="lazy" />
+            <img src={src} alt="Membresía" loading="lazy"
+              onError={() => { setSrc(IMAGES.toast) }} />
             <span className="tag">Beneficios exclusivos</span>
           </div>
           <div>

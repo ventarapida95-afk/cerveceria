@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import Reservas from './Reservas.jsx'
 import { ClockIcon, WhatsAppIcon } from './icons.jsx'
 import { BUSINESS } from '../lib/constants.js'
 
 export default function ReservasSection() {
+  const [img, setImg] = useState('/images/cervezas.jpg')
   return (
     <section className="section" id="reservas">
       <div className="container">
@@ -14,7 +16,8 @@ export default function ReservasSection() {
         <div className="reservas-wrap">
           <div>
             <div className="media" style={{ marginBottom: 26 }}>
-              <img src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=1200&q=80" alt="Reservas" loading="lazy" />
+              <img src={img} alt="Reservas" loading="lazy"
+                onError={() => setImg('https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=1200&q=80')} />
               <span className="tag">Catas y tours disponibles</span>
             </div>
             <div className="contact-card" style={{ padding: 26 }}>

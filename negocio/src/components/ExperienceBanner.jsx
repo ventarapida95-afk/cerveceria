@@ -1,12 +1,14 @@
-import { IMAGES } from '../lib/images.js'
+import { IMAGES, IMAGE_LOCAL } from '../lib/images.js'
 import { BUSINESS } from '../lib/constants.js'
+import { useLocalImage } from '../lib/useLocalImage.js'
 
 export default function ExperienceBanner() {
+  const brewery = useLocalImage(IMAGE_LOCAL.brewery, IMAGES.brewery)
   return (
     <section className="section" style={{ paddingTop: 0 }}>
       <div className="container">
         <div className="banner">
-          <div className="banner-bg" style={{ backgroundImage: `url(${IMAGES.brewery})` }} />
+          <div className="banner-bg" style={{ backgroundImage: `url(${brewery})` }} />
           <div className="banner-overlay" />
           <div className="banner-content">
             <span className="eyebrow">Experiencias</span>

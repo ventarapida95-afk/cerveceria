@@ -18,6 +18,15 @@ export const DATA = {
 }
 
 export const IMG = {
+  hero: '/images/hero.jpg',
+  glasses: '/images/cervezas.jpg',
+  bottles: '/images/galeria-2.jpg',
+  toast: '/images/brindis.jpg',
+  brewing: '/images/sala.jpg',
+  bar: '/images/barra.jpg',
+}
+
+export const IMG_FALLBACK = {
   hero: 'https://images.unsplash.com/photo-1532634922-8fe0b757fb13?w=1800&q=80',
   glasses: 'https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=1200&q=80',
   bottles: 'https://images.unsplash.com/photo-1566633806327-68e152aaf26d?w=1200&q=80',

@@ -1,10 +1,12 @@
-import { IMAGES } from '../lib/images.js'
+import { IMAGES, IMAGE_LOCAL } from '../lib/images.js'
 import { BUSINESS } from '../lib/constants.js'
+import { useLocalImage } from '../lib/useLocalImage.js'
 
 export default function Hero() {
+  const hero = useLocalImage(IMAGE_LOCAL.hero, IMAGES.hero)
   return (
     <section className="hero" id="inicio">
-      <div className="hero-bg" style={{ backgroundImage: `url(${IMAGES.hero})` }} />
+      <div className="hero-bg" style={{ backgroundImage: `url(${hero})` }} />
       <div className="hero-overlay" />
       <div className="container hero-content">
         <span className="eyebrow">Cervecería & Restaurante · Angol, Chile</span>

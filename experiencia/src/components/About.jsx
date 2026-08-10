@@ -1,16 +1,19 @@
-import { IMAGES } from '../lib/images.js'
+import { IMAGES, IMAGE_LOCAL } from '../lib/images.js'
+import { useLocalImage } from '../lib/useLocalImage.js'
 
 export default function About() {
+  const about = useLocalImage(IMAGE_LOCAL.about, IMAGES.about)
+  const brewing = useLocalImage(IMAGE_LOCAL.brewing, IMAGES.brewing)
   return (
     <section className="section" id="historia">
       <div className="container split">
         <div className="media-stack">
           <div className="media">
-            <img src={IMAGES.about} alt="Vaso de cerveza artesanal" loading="lazy" />
+            <img src={about} alt="Vaso de cerveza artesanal" loading="lazy" />
             <span className="tag">Estilo & tradición</span>
           </div>
           <div className="media">
-            <img src={IMAGES.brewing} alt="Sala de cocción" loading="lazy" />
+            <img src={brewing} alt="Sala de cocción" loading="lazy" />
             <span className="tag">Elaboración propia</span>
           </div>
         </div>

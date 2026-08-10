@@ -1,12 +1,23 @@
 import { useEffect, useMemo, useState } from 'react'
 import { supabase } from '../lib/supabase.js'
 import { FALLBACK_PRODUCTS } from '../data/products.js'
-import { IMAGES } from '../lib/images.js'
 import { CURRENCY } from '../lib/constants.js'
 import { useCart } from '../context/CartContext.jsx'
+import { localProductImage, stockProductImage } from '../lib/productImages.js'
 
 const CATEGORIES = ['Todos', 'Cerveza', 'Comida', 'Experiencia']
-const IMG_POOL = [IMAGES.glasses, IMAGES.bottles, IMAGES.toast, IMAGES.brewery, IMAGES.brewing, IMAGES.hops, IMAGES.kegs, IMAGES.bar]
+
+function ProductImage({ name, category }) {
+  const [src, setSrc] = useState(localProductImage(name))
+  return (
+    <img
+      src={src}
+      alt={name}
+      loading="lazy"
+      onError={() => setSrc(stockProductImage(name, category))}
+    />
+  )
+}
 
 export default function Products() {
   const [products, setProducts] = useState([])
@@ -62,7 +73,7 @@ export default function Products() {
           {visible.map((p, idx) => (
             <article className="card" key={p.id}>
               <div className="card-img">
-                <img src={p.image_url || IMG_POOL[idx % IMG_POOL.length]} alt={p.name} loading="lazy" />
+                <ProductImage name={p.name} category={p.category} />
               </div>
               {p.badge && <span className="card-badge">{p.badge}</span>}
               <div className="card-body">

@@ -10,3 +10,17 @@ export const IMAGES = {
   kegs: 'https://images.unsplash.com/photo-1530267981375-f0de937f5f13?w=1200&q=80',
   bar: 'https://images.unsplash.com/photo-1505075106905-fb052892c116?w=1200&q=80',
 }
+
+// Fotos reales en public/images: si el archivo existe, se usan en vez del stock.
+export const IMAGE_LOCAL = {
+  hero: '/images/hero.jpg',
+  about: '/images/cervezas.jpg',
+  glasses: '/images/cervezas.jpg',
+  bottles: '/images/galeria-2.jpg',
+  toast: '/images/brindis.jpg',
+  brewery: '/images/sala.jpg',
+  brewing: '/images/sala.jpg',
+  hops: '/images/cervezas.jpg',
+  kegs: '/images/galeria-3.jpg',
+  bar: '/images/barra.jpg',
+}

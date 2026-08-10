@@ -1,5 +1,19 @@
 import { useEffect, useState } from 'react'
-import { DATA, IMG, MENU } from './data.js'
+import { DATA, IMG, IMG_FALLBACK, MENU } from './data.js'
+
+const SmartImg = ({ name, alt, className, ...rest }) => {
+  const [src, setSrc] = useState(IMG[name])
+  return (
+    <img
+      className={className}
+      src={src}
+      alt={alt}
+      loading="lazy"
+      onError={() => setSrc(IMG_FALLBACK[name])}
+      {...rest}
+    />
+  )
+}
 
 const WhatsApp = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -57,7 +71,7 @@ export default function App() {
             <a className="btn btn-line" href="#menu">Ver la carta</a>
           </div>
         </div>
-        <div className="hero-img"><img src={IMG.hero} alt="Cervecería Brunnemann" /></div>
+        <div className="hero-img"><SmartImg name="hero" alt="Cervecería Brunnemann" /></div>
       </section>
 
       <section className="section" style={{ paddingTop: 20 }}>
@@ -102,7 +116,7 @@ export default function App() {
 
       <section className="section" id="nosotros">
         <div className="container split">
-          <img src={IMG.brewing} alt="Sala de cocción" loading="lazy" />
+          <SmartImg name="brewing" alt="Sala de cocción" />
           <div>
             <span className="eyebrow">Nosotros</span>
             <h2 className="section-title">Un oficio familiar<br />hecho cerveza</h2>
@@ -117,10 +131,10 @@ export default function App() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="gallery">
-            <img src={IMG.glasses} alt="Cervezas" loading="lazy" />
-            <img src={IMG.toast} alt="Brindis" loading="lazy" />
-            <img src={IMG.bar} alt="Barra" loading="lazy" />
-            <img src={IMG.bottles} alt="Botellas" loading="lazy" />
+            <SmartImg name="glasses" alt="Cervezas" />
+            <SmartImg name="toast" alt="Brindis" />
+            <SmartImg name="bar" alt="Barra" />
+            <SmartImg name="bottles" alt="Botellas" />
           </div>
         </div>
       </section>
