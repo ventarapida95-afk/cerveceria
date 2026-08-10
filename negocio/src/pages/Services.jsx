@@ -6,6 +6,7 @@ const PLANS = [
   {
     name: 'Vitrina',
     price: 'desde $250.000',
+    maint: '$25.000/mes',
     desc: 'La vitrina digital perfecta para presentar tu negocio y atraer clientes.',
     features: [
       { text: 'Diseño premium con tu marca', on: true },
@@ -23,6 +24,7 @@ const PLANS = [
     featured: true,
     ribbon: 'Más elegido',
     price: 'desde $450.000',
+    maint: '$40.000/mes',
     desc: 'Tu página toma pedidos y recibe pagos sola. La que más vende por ti.',
     features: [
       { text: 'Todo lo del plan Vitrina', on: true },
@@ -38,6 +40,7 @@ const PLANS = [
   {
     name: 'Experiencia',
     price: 'desde $700.000',
+    maint: '$60.000/mes',
     desc: 'Experiencia completa con reservas, eventos y datos en tiempo real.',
     features: [
       { text: 'Todo lo del plan Negocio', on: true },
@@ -64,6 +67,8 @@ const FAQ = [
   { q: '¿Los pagos de mis clientes llegan directo a mi cuenta?', a: 'Sí. Se cobran con MercadoPago y el dinero va a tu cuenta de MercadoPago o banco. Sin intermediarios de nuestra parte.' },
   { q: '¿La página funciona en celular?', a: 'Sí, es lo más importante. Diseñamos primero para el celular, donde está el 80% de tus clientes.' },
   { q: '¿Puedo pedir cambios después?', a: 'Sí. Cada plan incluye un mes de ajustes gratuitos. Después ofrecemos mantención con planes accesibles.' },
+  { q: '¿Cuánto cuesta mantener mi página al mes?', a: 'La mantención va desde los $25.000 mensuales según el plan. Incluye hosting, dominio y SSL, actualización de tu menú o precios, respaldo diario, seguridad y soporte por WhatsApp. La página funciona igual sin mantención, solo pierde esos beneficios.' },
+  { q: '¿Hay pagos o comisiones ocultas?', a: 'No. Cobras un pago único por el diseño y, si quieres, una mantención mensual fija. Si tomas pedidos en línea, solo las comisiones de MercadoPago van directo a cargo del comercio.' },
 ]
 
 export default function Services() {
@@ -93,6 +98,7 @@ export default function Services() {
                 <h3>{p.name}</h3>
                 <p className="plan-desc">{p.desc}</p>
                 <div className="plan-price">{p.price}</div>
+                <p className="plan-maint">+ mantención de <strong>{p.maint}</strong></p>
                 <ul>
                   {p.features.map((f, i) => (
                     <li key={i} className={f.on ? 'on' : 'off'}>{f.text}</li>
@@ -104,6 +110,12 @@ export default function Services() {
               </article>
             ))}
           </div>
+          <p className="plans-note">
+            La mantención incluye hosting, dominio y certificado SSL, actualización de tu menú o
+            catálogo, respaldo diario, seguridad y soporte por WhatsApp. Sin mantención la página
+            sigue funcionando; con ella, siempre está al día.
+            Las comisiones de cobro (MercadoPago) van a cargo del comercio.
+          </p>
         </div>
       </section>
 

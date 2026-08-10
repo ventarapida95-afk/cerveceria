@@ -24,3 +24,5 @@ Copia aquí las fotos del local con estos nombres exactos (todo en minúsculas, 
 - galeria-1.jpg … galeria-8.jpg — fotos para la galería (experiencia)
 
 Si no existe un archivo, la web muestra automáticamente una imagen de respaldo (stock) hasta que agregues la tuya.
+
+IMPORTANTE: cada producto de la carta debe tener su propia foto distinta. No copies la misma imagen con varios nombres: se verá repetida en la carta. Si aún no tienes la foto real de un producto, no crees el archivo: la web muestra una foto de stock apropiada y automáticamente.
