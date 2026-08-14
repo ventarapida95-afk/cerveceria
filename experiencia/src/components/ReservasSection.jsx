@@ -1,7 +1,13 @@
 import { useState } from 'react'
 import Reservas from './Reservas.jsx'
-import { ClockIcon, WhatsAppIcon } from './icons.jsx'
+import { ClockIcon, WhatsAppIcon, CheckIcon } from './icons.jsx'
 import { BUSINESS } from '../lib/constants.js'
+
+const PERKS = [
+  { icon: <CheckIcon />, title: 'Confirmación inmediata', text: 'Te respondemos por WhatsApp' },
+  { icon: <ClockIcon />, title: 'Horario flexible', text: 'Mar–Dom · 18:30 a 23:45 hrs' },
+  { icon: <WhatsAppIcon />, title: 'Sin anticipo', text: 'Solo confirma y ven a disfrutar' },
+]
 
 export default function ReservasSection() {
   const [img, setImg] = useState('/images/cervezas.jpg')
@@ -30,6 +36,17 @@ export default function ReservasSection() {
             </div>
           </div>
           <Reservas />
+        </div>
+        <div className="reserva-perks">
+          {PERKS.map((p) => (
+            <div className="perk" key={p.title}>
+              <div className="perk-icon">{p.icon}</div>
+              <div>
+                <h4>{p.title}</h4>
+                <p>{p.text}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

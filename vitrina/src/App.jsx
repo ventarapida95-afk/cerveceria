@@ -102,7 +102,7 @@ export default function App() {
           <h1>Cerveza artesanal<br />y cocina de <em>fuego</em></h1>
           <p>Te esperamos en Angol con las mejores cervezas de la casa, gastronomía para acompañar cada vaso y un ambiente para quedarse.</p>
           <div className="hero-actions">
-            <a className="btn btn-primary" href={waLink('Hola Brunnemann, quiero hacer una reserva.')}>Reservar por WhatsApp</a>
+            <a className="btn btn-primary" href={waLink('Hola Brunnemann, quiero información sobre su cervecería.')}>Contáctanos por WhatsApp</a>
             <a className="btn btn-line" href="#menu">Ver la carta</a>
           </div>
         </div>
@@ -125,7 +125,7 @@ export default function App() {
           <div className="head">
             <span className="eyebrow">Nuestra carta</span>
             <h2 className="section-title">Lo que hay que probar</h2>
-            <p className="section-sub">Precios en pesos chilenos. Todo se puede pedir para llevar.</p>
+            <p className="section-sub">Precios en pesos chilenos. Consulta por WhatsApp la carta completa y retiro.</p>
           </div>
           <div className="menu-grid">
             {MENU.map((col) => (
@@ -144,7 +144,7 @@ export default function App() {
             ))}
           </div>
           <div className="menu-cta">
-            <a className="btn btn-primary" href={waLink('Hola Brunnemann, quisiera pedir: ') }>Pedir por WhatsApp</a>
+            <a className="btn btn-primary" href={waLink('Hola Brunnemann, quisiera consultar por un pedido.') }>Consultar por WhatsApp</a>
           </div>
         </div>
       </section>
@@ -194,7 +194,7 @@ export default function App() {
           <div className="contact">
             <span className="eyebrow" style={{ color: '#f0c887' }}>Contacto</span>
             <h2>¿Ganas de una cerveza?</h2>
-            <p>Escríbenos para reservas, pedidos o consultas. También puedes dejarnos tu reseña en Google Maps.</p>
+            <p>Contáctanos por WhatsApp para consultas y deja tu opinión en Google Maps.</p>
             <div className="actions">
               <a className="btn btn-primary" href={waLink('Hola Brunnemann, quiero información.')}><WhatsApp /> WhatsApp</a>
               <a className="btn btn-line" style={{ borderColor: 'rgba(240,200,135,0.3)', color: '#f6eeda' }} href={DATA.reviewUrl} target="_blank" rel="noreferrer">Deja tu reseña en Google</a>

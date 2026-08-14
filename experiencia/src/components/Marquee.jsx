@@ -1,4 +1,4 @@
-const words = ['Cerveza Artesanal', 'Gastronomía de Fuego', 'Pedidos Online', 'Reseñas en Google', 'Brunnemann', 'Angol · Chile', 'Elaborada en Casa']
+const words = ['Cerveza Artesanal', 'Gastronomía de Fuego', 'Reserva tu Mesa', 'Catas Guiadas', 'Reseñas en Google', 'Brunnemann', 'Angol · Chile', 'Elaborada en Casa']
 
 export default function Marquee() {
   const track = [...words, ...words]

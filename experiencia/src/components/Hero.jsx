@@ -8,6 +8,7 @@ export default function Hero() {
     <section className="hero" id="inicio">
       <div className="hero-bg" style={{ backgroundImage: `url(${hero})` }} />
       <div className="hero-overlay" />
+      <div className="hero-badge">Miércoles de <b>Promos</b> · 18:30 a 23:45 hrs</div>
       <div className="container hero-content">
         <span className="eyebrow">Cervecería & Restaurante · Angol, Chile</span>
         <h1>
@@ -29,6 +30,7 @@ export default function Hero() {
           <div className="stat"><div className="num">$15.000</div><div className="lbl">Precio promedio por persona</div></div>
         </div>
       </div>
+      <div className="hero-cue" aria-hidden="true"><span /></div>
     </section>
   )
 }

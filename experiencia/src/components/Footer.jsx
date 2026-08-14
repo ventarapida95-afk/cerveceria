@@ -39,10 +39,11 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4>Negocio</h4>
+            <h4>Contacto</h4>
             <ul>
-              <li><Link to="/servicios">Propuestas de sitio web</Link></li>
               <li><a href={BUSINESS.reviewUrl} target="_blank" rel="noreferrer">Deja tu reseña en Google</a></li>
+              <li><a href={BUSINESS.instagram} target="_blank" rel="noreferrer">Instagram</a></li>
+              <li><a href={BUSINESS.facebook} target="_blank" rel="noreferrer">Facebook</a></li>
             </ul>
           </div>
         </div>

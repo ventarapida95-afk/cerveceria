@@ -1,4 +1,4 @@
-const STAGGERED = '.card, .review, .contact-card, .feature, .media, .plan, .pitch-card, .menu-col, .menu-item, .galeria .media, .faq details'
+const STAGGERED = '.card, .review, .contact-card, .feature, .media, .menu-col, .menu-item, .galeria .media'
 
 const REVEAL_SELECTOR = [
   '[data-reveal]',
@@ -16,15 +16,9 @@ const REVEAL_SELECTOR = [
   '.menu-col',
   '.menu-item',
   '.menu-cta',
-  '.plan',
-  '.pitch-card',
   '.gallery',
   '.galeria .media',
-  '.reserva-form',
-  '.reserva-box',
   '.contact',
-  '.services-hero',
-  '.faq details',
 ].join(', ')
 
 let started = false

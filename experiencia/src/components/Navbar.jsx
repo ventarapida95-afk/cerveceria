@@ -53,7 +53,7 @@ export default function Navbar() {
         </nav>
 
         <div className="nav-cta">
-          <Link to="/servicios" className="btn btn-outline">Propuestas web</Link>
+          <a className="btn btn-outline" href="https://wa.me/56968710565?text=Hola%20Brunnemann%2C%20quiero%20hacer%20una%20reserva." target="_blank" rel="noreferrer">Reservar mesa</a>
           <button className="nav-burger" onClick={() => setMobile((v) => !v)} aria-label="Menú">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
               {mobile ? <path d="M18 6L6 18M6 6l12 12" /> : <path d="M3 6h18M3 12h18M3 18h18" />}
@@ -67,7 +67,7 @@ export default function Navbar() {
           {links.map((l) => (
             <a key={l.to} href={l.to} onClick={(e) => go(e, l.to)}>{l.label}</a>
           ))}
-          <Link to="/servicios" className="btn btn-outline" style={{ alignSelf: 'flex-start' }}>Propuestas web</Link>
+          <a className="btn btn-outline" href="https://wa.me/56968710565?text=Hola%20Brunnemann%2C%20quiero%20hacer%20una%20reserva." target="_blank" rel="noreferrer" style={{ alignSelf: 'flex-start' }}>Reservar mesa</a>
         </nav>
       )}
     </header>

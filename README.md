@@ -1,13 +1,13 @@
 # Brunnemann Cervecería · 2 propuestas web
 
-Propuestas de sitio web para mostrarle al cliente. Dos opciones de distinto alcance y precio:
+Dos sitios web para mostrarle al cliente. Cada uno corre por separado y el cliente elige una de las dos. Se presentan en persona abriendo cada web (`vitrina` y `experiencia`).
 
 | Propuesta | Carpeta | Qué incluye | Precio aprox. |
 |---|---|---|---|
-| **Presencia** | `vitrina/` | Página propia con la identidad de la marca: carta, ubicación, horarios, WhatsApp e Instagram/Facebook | desde $250.000 |
-| **Reservas** | `experiencia/` | Todo lo anterior + reservas de mesas, catas, tours y eventos por WhatsApp, pedidos de carta y reseñas reales | desde $450.000 |
+| **Presencia** | `vitrina/` | Página propia con la identidad de la marca: carta, ubicación, horarios, contacto directo por WhatsApp y reseñas de Google Maps | desde $250.000 |
+| **Reservas** | `experiencia/` | Presencia digital completa + sistema de reservas (mesas, catas, tours y eventos) por WhatsApp, pedidos de carta, botón flotante, galería y reseñas reales | desde $450.000 |
 
-El cliente decide cuál de las dos quiere. `experiencia/` incluye una página interna (`/servicios`) que presenta ambas propuestas.
+La opción **Presencia** es básica: solo mostrar el negocio y dar el contacto directo. La opción **Reservas** apunta a vender la experiencia: diseño premium, reservas por WhatsApp desde cualquier parte de la página y herramientas de conversión.
 
 ## Identidad de marca
 - **Paleta:** espresso/café oscuro (`#14100c`), ámbar dorado (`#c9a25f`) y crema (`#f2eddf`).
