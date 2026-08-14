@@ -16,16 +16,16 @@ export default function Hero() {
         </h1>
         <p className="lead">
           Cerveza artesanal elaborada en casa, gastronomía de fuego y madera,
-          y un ambiente que invita a quedarse. Pide online y recibe en tu puerta
-          o ven a disfrutar en nuestro local.
+          y un ambiente que invita a quedarse. Reserva tu mesa o escríbenos
+          por WhatsApp.
         </p>
         <div className="hero-actions">
-          <a href="#carta" className="btn btn-gold">Ver carta y pedir</a>
-          <a href={BUSINESS.mapsUrl} target="_blank" rel="noreferrer" className="btn btn-outline">Cómo llegar</a>
+          <a href="#reservas" className="btn btn-gold">Reservar mesa</a>
+          <a href="#carta" className="btn btn-outline">Ver la carta</a>
         </div>
         <div className="hero-stats">
           <div className="stat"><div className="num">4.8★</div><div className="lbl">{BUSINESS.reviewCount} reseñas en Google</div></div>
-          <div className="stat"><div className="num">Mar–Dom</div><div className="lbl">Desde las 18:30 hrs</div></div>
+          <div className="stat"><div className="num">Mar–Dom</div><div className="lbl">18:30 a 23:45 hrs</div></div>
           <div className="stat"><div className="num">$15.000</div><div className="lbl">Precio promedio por persona</div></div>
         </div>
       </div>

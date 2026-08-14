@@ -1,13 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { useCart } from '../context/CartContext.jsx'
-import { CartIcon } from './icons.jsx'
 
 const links = [
   { to: '/#inicio', label: 'Inicio' },
   { to: '/#carta', label: 'Nuestra Carta' },
   { to: '/#reservas', label: 'Reservas' },
-  { to: '/#membresia', label: 'Membresía' },
   { to: '/#galeria', label: 'Galería' },
   { to: '/#reseñas', label: 'Reseñas' },
   { to: '/#ubicacion', label: 'Ubicación' },
@@ -17,7 +14,6 @@ const links = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobile, setMobile] = useState(false)
-  const { count, setDrawerOpen } = useCart()
   const location = useLocation()
 
   useEffect(() => {
@@ -58,10 +54,6 @@ export default function Navbar() {
 
         <div className="nav-cta">
           <Link to="/servicios" className="btn btn-outline">Propuestas web</Link>
-          <button className="cart-btn" aria-label="Carrito" onClick={() => setDrawerOpen(true)}>
-            <CartIcon />
-            {count > 0 && <span className="cart-badge">{count}</span>}
-          </button>
           <button className="nav-burger" onClick={() => setMobile((v) => !v)} aria-label="Menú">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
               {mobile ? <path d="M18 6L6 18M6 6l12 12" /> : <path d="M3 6h18M3 12h18M3 18h18" />}

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { supabase } from '../lib/supabase.js'
+import { BUSINESS } from '../lib/constants.js'
 import { CheckIcon, WhatsAppIcon } from './icons.jsx'
 
 const OPTIONS = ['Mesa', 'Cata Guiada', 'Tour de Cervecería', 'Evento privado']
@@ -7,39 +7,29 @@ const OPTIONS = ['Mesa', 'Cata Guiada', 'Tour de Cervecería', 'Evento privado']
 export default function Reservas() {
   const [form, setForm] = useState({ name: '', phone: '', date: '', time: '20:00', guests: '2', type: 'Mesa', note: '' })
   const [sent, setSent] = useState(false)
-  const [sending, setSending] = useState(false)
-  const [error, setError] = useState(false)
 
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }))
 
-  const submit = async (e) => {
+  const submit = (e) => {
     e.preventDefault()
-    setSending(true)
-    try {
-      const { error: err } = await supabase.from('brewery_reservations').insert({
-        customer_name: form.name,
-        phone: form.phone,
-        reservation_date: form.date,
-        reservation_time: form.time,
-        guests: Number(form.guests),
-        reservation_type: form.type,
-        note: form.note || null,
-      })
-      if (err) throw err
-      setSent(true)
-    } catch {
-      setError(true)
-    } finally {
-      setSending(false)
-    }
+    const msg =
+      `Hola Brunnemann, quiero reservar:\n\n` +
+      `• ${form.type} — ${form.guests} persona(s)\n` +
+      `• Fecha: ${form.date} a las ${form.time} hrs\n` +
+      (form.name ? `• Nombre: ${form.name}\n` : '') +
+      (form.phone ? `• Contacto: ${form.phone}\n` : '') +
+      (form.note ? `• Comentarios: ${form.note}\n` : '') +
+      `\n¿Me confirman por favor?`
+    window.open(`https://wa.me/${BUSINESS.phoneWhatsApp}?text=${encodeURIComponent(msg)}`, '_blank')
+    setSent(true)
   }
 
   if (sent) {
     return (
       <div className="reserva-box">
         <div className="check"><CheckIcon /></div>
-        <h3>¡Reserva solicitada!</h3>
-        <p>Recibimos tu solicitud y te confirmaremos por WhatsApp.</p>
+        <h3>¡Reserva lista para enviar!</h3>
+        <p>Se abrió WhatsApp con tu solicitud. Solo presiona enviar y te confirmaremos.</p>
       </div>
     )
   }
@@ -80,9 +70,8 @@ export default function Reservas() {
         <label>Comentarios</label>
         <textarea rows="3" value={form.note} onChange={set('note')} placeholder="Algo que debamos saber…" />
       </div>
-      {error && <p style={{ color: '#e0706c', marginBottom: 12 }}>No pudimos guardar tu reserva. Intenta de nuevo.</p>}
-      <button className="btn btn-gold" type="submit" disabled={sending} style={{ width: '100%' }}>
-        {sending ? 'Enviando…' : 'Solicitar reserva'}
+      <button className="btn btn-gold" type="submit" style={{ width: '100%' }}>
+        <WhatsAppIcon /> Solicitar reserva por WhatsApp
       </button>
     </form>
   )

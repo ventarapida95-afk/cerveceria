@@ -4,7 +4,6 @@ import About from '../components/About.jsx'
 import Products from '../components/Products.jsx'
 import ExperienceBanner from '../components/ExperienceBanner.jsx'
 import ReservasSection from '../components/ReservasSection.jsx'
-import Membresia from '../components/Membresia.jsx'
 import Galeria from '../components/Galeria.jsx'
 import Reviews from '../components/Reviews.jsx'
 import MapSection from '../components/MapSection.jsx'
@@ -19,7 +18,6 @@ export default function Home() {
       <Products />
       <ExperienceBanner />
       <ReservasSection />
-      <Membresia />
       <Galeria />
       <Reviews />
       <MapSection />

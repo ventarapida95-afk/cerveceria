@@ -28,7 +28,7 @@ export default function About() {
           <ul className="text-list">
             <li>Recetas propias, fermentación lenta y sin apuros.</li>
             <li>Maridajes creados junto a nuestra cocina de fuego y leña.</li>
-            <li>Pedidos online con despacho en Angol y retiro en local.</li>
+            <li>Pedidos y reservas por WhatsApp, retiro en local.</li>
             <li>Tu opinión cuenta: califícanos en Google Maps tras tu visita.</li>
           </ul>
         </div>

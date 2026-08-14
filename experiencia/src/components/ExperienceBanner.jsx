@@ -15,9 +15,9 @@ export default function ExperienceBanner() {
             <h2>Vive la cervecería <span className="gold-text">por dentro</span></h2>
             <p className="section-sub" style={{ margin: '0 0 28px' }}>
               Catas guiadas, tour por la sala de cocción y maridajes con la cocina.
-              Agenda tu experiencia desde la carta o escríbenos por WhatsApp.
+              Agenda tu experiencia en el formulario de reservas.
             </p>
-            <a href="#carta" className="btn btn-gold">Reservar experiencia</a>
+            <a href="#reservas" className="btn btn-gold">Reservar experiencia</a>
           </div>
         </div>
       </div>

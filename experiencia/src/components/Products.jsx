@@ -1,8 +1,7 @@
-import { useEffect, useMemo, useState } from 'react'
-import { supabase } from '../lib/supabase.js'
+import { useMemo, useState } from 'react'
 import { FALLBACK_PRODUCTS } from '../data/products.js'
-import { CURRENCY } from '../lib/constants.js'
-import { useCart } from '../context/CartContext.jsx'
+import { CURRENCY, BUSINESS } from '../lib/constants.js'
+import { WhatsAppIcon } from './icons.jsx'
 import { localProductImage, stockProductImage } from '../lib/productImages.js'
 
 const CATEGORIES = ['Todos', 'Cerveza', 'Comida', 'Experiencia']
@@ -19,34 +18,15 @@ function ProductImage({ name, category }) {
   )
 }
 
-export default function Products() {
-  const [products, setProducts] = useState([])
-  const [active, setActive] = useState('Todos')
-  const { addItem } = useCart()
+const waLink = (name) =>
+  `https://wa.me/${BUSINESS.phoneWhatsApp}?text=${encodeURIComponent(`Hola Brunnemann, quiero pedir: ${name}.`)}`
 
-  useEffect(() => {
-    let mounted = true
-    const load = async () => {
-      let list = FALLBACK_PRODUCTS
-      try {
-        const { data, error } = await supabase
-          .from('brewery_products')
-          .select('id, name, category, description, price, badge, available')
-          .eq('available', true)
-          .order('id')
-        if (!error && data?.length) list = data
-      } catch {
-        /* usa respaldo local */
-      }
-      if (mounted) setProducts(list)
-    }
-    load()
-    return () => { mounted = false }
-  }, [])
+export default function Products() {
+  const [active, setActive] = useState('Todos')
 
   const visible = useMemo(
-    () => (active === 'Todos' ? products : products.filter((p) => p.category === active)),
-    [products, active],
+    () => (active === 'Todos' ? FALLBACK_PRODUCTS : FALLBACK_PRODUCTS.filter((p) => p.category === active)),
+    [active],
   )
 
   return (
@@ -54,10 +34,10 @@ export default function Products() {
       <div className="container">
         <div className="section-head center">
           <span className="eyebrow">Nuestra Carta</span>
-          <h2 className="section-title">Elige, pide <span className="serif-amp">&</span> recibe</h2>
+          <h2 className="section-title">Lo que <span className="serif-amp">hay que</span> probar</h2>
           <p className="section-sub">
-            Todo el menú disponible para pedir online. Agrega al carrito, paga con
-            tarjeta y recibe en casa o retira en el local.
+            Cervezas de la casa, cocina de fuego y experiencias. Pide por WhatsApp
+            y retira en el local o reserva tu visita.
           </p>
         </div>
 
@@ -70,7 +50,7 @@ export default function Products() {
         </div>
 
         <div className="grid">
-          {visible.map((p, idx) => (
+          {visible.map((p) => (
             <article className="card" key={p.id}>
               <div className="card-img">
                 <ProductImage name={p.name} category={p.category} />
@@ -81,7 +61,9 @@ export default function Products() {
                 <p>{p.description}</p>
                 <div className="card-foot">
                   <span className="price">{CURRENCY.format(p.price)}</span>
-                  <button className="add-btn" aria-label={`Agregar ${p.name}`} onClick={() => addItem(p)}>+</button>
+                  <a className="add-btn" aria-label={`Pedir ${p.name} por WhatsApp`} href={waLink(p.name)} target="_blank" rel="noreferrer">
+                    <WhatsAppIcon />
+                  </a>
                 </div>
               </div>
             </article>

@@ -1,67 +1,53 @@
 import { Link } from 'react-router-dom'
 import { BUSINESS } from '../lib/constants.js'
-import { BoltIcon, WalletIcon, StarBadgeIcon, ShieldIcon, GoogleIcon, WhatsAppIcon } from '../components/icons.jsx'
+import { BoltIcon, StarBadgeIcon, ShieldIcon, GoogleIcon, WhatsAppIcon } from '../components/icons.jsx'
 
 const PLANS = [
   {
-    name: 'Vitrina',
+    name: 'Presencia',
     price: 'desde $250.000',
-    desc: 'La vitrina digital perfecta para presentar tu negocio y atraer clientes.',
+    desc: 'Tu propia página web con la identidad de Brunnemann. Simple, elegante y lista para mostrar.',
     features: [
-      { text: 'Diseño premium con tu marca', on: true },
-      { text: 'Menú / catálogo digital', on: true },
+      { text: 'Diseño premium con los colores de tu marca', on: true },
+      { text: 'Carta digital con productos y precios', on: true },
       { text: 'Ubicación y horarios en Google Maps', on: true },
       { text: 'Botón de WhatsApp para consultas', on: true },
+      { text: 'Enlace a Instagram y Facebook', on: true },
       { text: 'Diseño adaptable a celular y computador', on: true },
       { text: 'Botón para reseñas en Google', on: true },
-      { text: 'Pedidos online con pago en línea', on: false },
-      { text: 'Toma de pedidos automática', on: false },
+      { text: 'Formulario de reservas por WhatsApp', on: false },
     ],
   },
   {
-    name: 'Negocio',
+    name: 'Reservas',
     featured: true,
-    ribbon: 'Más elegido',
+    ribbon: 'Más completo',
     price: 'desde $450.000',
-    desc: 'Tu página toma pedidos y recibe pagos sola. La que más vende por ti.',
+    desc: 'Tu página toma reservas de mesas y experiencias directo por WhatsApp. La que te trae clientes.',
     features: [
-      { text: 'Todo lo del plan Vitrina', on: true },
-      { text: 'Carrito y checkout con tarjeta (MercadoPago)', on: true },
-      { text: 'Toma de pedidos automática 24/7', on: true },
-      { text: 'Confirmación de pedidos por WhatsApp', on: true },
-      { text: 'Panel para ver y gestionar pedidos', on: true },
-      { text: 'Cupones y ofertas', on: true },
-      { text: 'Enlace directo para reseñas en Google Maps', on: true },
+      { text: 'Todo lo del plan Presencia', on: true },
+      { text: 'Formulario de reservas de mesas', on: true },
+      { text: 'Reservas de catas, tours y eventos', on: true },
+      { text: 'Pedidos de carta por WhatsApp', on: true },
+      { text: 'Galería de ambiente y productos', on: true },
+      { text: 'Reseñas reales de clientes en Google', on: true },
       { text: 'SEO local para aparecer en Google', on: true },
-    ],
-  },
-  {
-    name: 'Experiencia',
-    price: 'desde $700.000',
-    desc: 'Experiencia completa con reservas, eventos y datos en tiempo real.',
-    features: [
-      { text: 'Todo lo del plan Negocio', on: true },
-      { text: 'Sistema de reservas de mesas y experiencias', on: true },
-      { text: 'Cuenta de cliente con historial', on: true },
-      { text: 'Programa de fidelización', on: true },
-      { text: 'Reportes de ventas en tiempo real', on: true },
-      { text: 'Integración con tu sistema de reparto', on: true },
-      { text: 'Soporte prioritario y capacitación', on: true },
+      { text: 'Panel simple para gestionar reservas', on: true },
     ],
   },
 ]
 
 const PITCH = [
-  { icon: <WalletIcon />, title: 'Recibe pagos en línea', desc: 'Tus clientes pagan con tarjeta al momento. Sin efectivo, sin esperas, sin pérdidas.' },
-  { icon: <BoltIcon />, title: 'Pedidos automáticos', desc: 'La página toma el pedido, cobra y te llega la notificación. Vende aunque estés durmiendo.' },
-  { icon: <StarBadgeIcon />, title: 'Reseñas en Google Maps', desc: 'Botón para que cada cliente satisfecho te califique. Más estrellas, más clientes nuevos.' },
-  { icon: <ShieldIcon />, title: 'Rápida y segura', desc: 'Carga instantánea, certificado SSL y datos protegidos. Tu negocio en la vitrina del mundo.' },
+  { icon: <WhatsAppIcon />, title: 'Reservas fáciles', desc: 'Tus clientes reservan mesa o experiencia y el detalle llega directo a tu WhatsApp.' },
+  { icon: <BoltIcon />, title: 'Lista en días', desc: 'Tu página queda en línea en menos de una semana, sin trámites ni complicaciones.' },
+  { icon: <StarBadgeIcon />, title: 'Reseñas en Google Maps', desc: 'Botón para que cada cliente satisfecho te califique. Más estrellas, más clientes.' },
+  { icon: <ShieldIcon />, title: 'Con tu identidad', desc: 'Colores, logo y fotos reales de Brunnemann. Tu negocio se ve como es.' },
 ]
 
 const FAQ = [
-  { q: '¿En cuánto tiempo estará lista mi página?', a: 'Depende del plan. La página Vitrina puede estar en 5 a 7 días. Las que toman pedidos y pagos en línea, entre 2 y 3 semanas, incluyendo pruebas.' },
-  { q: '¿Necesito saber de computación para administrarla?', a: 'No. Te capacitamos y todo es simple: agregar productos, ver pedidos y responder por WhatsApp. Nosotros nos encargamos del resto.' },
-  { q: '¿Los pagos de mis clientes llegan directo a mi cuenta?', a: 'Sí. Se cobran con MercadoPago y el dinero va a tu cuenta de MercadoPago o banco. Sin intermediarios de nuestra parte.' },
+  { q: '¿En cuánto tiempo estará lista mi página?', a: 'La propuesta Presencia puede estar en 5 a 7 días. La propuesta Reservas, entre 7 y 10 días incluyendo pruebas.' },
+  { q: '¿Necesito saber de computación para administrarla?', a: 'No. Te capacitamos y todo es simple: ver reservas, actualizar la carta y responder por WhatsApp. Nosotros nos encargamos del resto.' },
+  { q: '¿Cómo llegan las reservas?', a: 'Cada reserva se arma como mensaje y llega directo a tu WhatsApp. Tú confirmas con un clic y respondes al cliente.' },
   { q: '¿La página funciona en celular?', a: 'Sí, es lo más importante. Diseñamos primero para el celular, donde está el 80% de tus clientes.' },
   { q: '¿Puedo pedir cambios después?', a: 'Sí. Cada plan incluye un mes de ajustes gratuitos. Después ofrecemos mantención con planes accesibles.' },
 ]
@@ -73,13 +59,12 @@ export default function Services() {
         <div className="container">
           <span className="eyebrow">Propuestas para tu negocio</span>
           <h1>
-            Tu página web que <span className="gold-text">vende sola</span>:<br />
-            recibe pagos, toma pedidos y junta <span className="gold-text">reseñas en Google</span>
+            La página web de <span className="gold-text">Brunnemann</span>:<br />
+            presencia digital o reservas <span className="gold-text">por WhatsApp</span>
           </h1>
           <p>
-            La mejor página no es la más bonita: es la que <strong style={{ color: 'var(--gold-2)' }}>recibe pagos, toma pedidos en automático</strong> y
-            convierte a cada cliente satisfecho en una <strong style={{ color: 'var(--gold-2)' }}>reseña en Google Maps</strong>.
-            Elige la propuesta que mejor se ajusta a tu presupuesto.
+            Dos propuestas simples y a medida, con los colores, el logo y las fotos reales
+            de tu cervecería. Elige la que mejor se ajusta a lo que necesitas hoy.
           </p>
         </div>
       </section>
@@ -98,7 +83,7 @@ export default function Services() {
                     <li key={i} className={f.on ? 'on' : 'off'}>{f.text}</li>
                   ))}
                 </ul>
-                <a className={`btn ${p.featured ? 'btn-gold' : 'btn-outline'}`} href={`https://wa.me/${BUSINESS.phoneWhatsApp}?text=${encodeURIComponent(`Hola, me interesa el plan "${p.name}" para la página web de mi negocio.`)}`} target="_blank" rel="noreferrer">
+                <a className={`btn ${p.featured ? 'btn-gold' : 'btn-outline'}`} href={`https://wa.me/${BUSINESS.phoneWhatsApp}?text=${encodeURIComponent(`Hola, me interesa el plan "${p.name}" para la página web de Brunnemann.`)}`} target="_blank" rel="noreferrer">
                   Quiero este plan
                 </a>
               </article>
@@ -110,9 +95,9 @@ export default function Services() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="pitch">
-            <span className="eyebrow">Por qué una página con funciones</span>
+            <span className="eyebrow">Por qué una página propia</span>
             <h2 className="section-title" style={{ fontSize: 'clamp(1.8rem, 3.6vw, 2.6rem)' }}>
-              Tu página debe <span className="serif-amp">trabajar por ti</span>
+              Tu negocio, <span className="serif-amp">como se ve</span> en persona
             </h2>
             <div className="pitch-cards">
               {PITCH.map((f, i) => (
@@ -136,7 +121,7 @@ export default function Services() {
           </div>
 
           <div style={{ textAlign: 'center', marginTop: 80 }}>
-            <p style={{ color: 'var(--muted)', marginBottom: 22 }}>Mira la propuesta en vivo: este mismo sitio web es un ejemplo del plan «Negocio».</p>
+            <p style={{ color: 'var(--muted)', marginBottom: 22 }}>Mira la propuesta «Reservas» en vivo: este mismo sitio.</p>
             <Link to="/" className="btn btn-gold">Ver el sitio de la cervecería</Link>
           </div>
         </div>
