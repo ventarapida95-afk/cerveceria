@@ -13,7 +13,7 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: var(--body); background: var(--bg); color: var(--ink); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--body); background: var(--bg); color: var(--ink); line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; }
@@ -105,6 +105,12 @@ h1, h2, h3 { font-family: var(--display); line-height: 1.15; font-weight: 600; }
 .footer a:hover { color: var(--accent); }
 
 /* ---------- Mobile refinements (≤480px) ---------- */
+@media (max-width: 640px) {
+  .hero-img { height: 320px; }
+  .contact .actions .btn { width: 100%; }
+  .map-wrap iframe { height: 340px; }
+}
+
 @media (max-width: 480px) {
   .section { padding: 64px 0; }
   .head { margin-bottom: 34px; }
